@@ -1,0 +1,22 @@
+---
+import WavesT from "../WavesT.astro";
+import WavesB from "../WavesB.astro";
+import Bubble from "../Bubble.astro";
+import Title from "../Title.astro";
+---
+
+<section id="tratamientos">
+  <WavesT color="#dd3497" />
+  <Title class="text-white bg-[#dd3497] my-[-2px]">TRATAMIENTOS</Title>
+  <article class="bg-[#dd3497] my-[-2px] flex flex-wrap  justify-center overflow-hidden">
+    <Bubble image="./assets/images/ojos.png" text="Belleza de Ojos"/>
+    <Bubble image="./assets/images/manos.png" text="Manicuria"/>
+    <Bubble image="./assets/images/pelo.png" text="Peluqueria"/>
+    <Bubble image="./assets/images/definitiva.png" text="Definitiva"/>
+    <Bubble image="./assets/images/cara.png" text="Facial"/>
+    <Bubble image="./assets/images/pies.png" text="Belleza de Pies"/>
+  </article>
+  <WavesB color="#dd3497" />
+</section>
+
+<!-- Demore en la vista mobil 45min -->

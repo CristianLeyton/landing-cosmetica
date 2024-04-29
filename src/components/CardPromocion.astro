@@ -1,0 +1,20 @@
+---
+const {image,promo} = Astro.props;
+import ButtonTurno from "./ButtonTurno.astro";
+---
+
+<article class="h-[285px] w-[370px] bg-cover bg-no-repeat rounded-3xl p-2" style=`background-image: url(${image});`>
+    <div class="bg-gray-700/50 rounded-3xl p-4 h-full flex flex-col items-center justify-between text-white text-center text-pretty text-lg leading-5 ">
+    <h1 class="font-black text-center text-4xl rounded text-pink-300 pt-4 ">
+        PROMO <br>
+        <span class="font-medium text-white">{promo}</span>
+    </h1>
+    <slot />
+    <span class="scale-[0.85]"><ButtonTurno></ButtonTurno></span>
+    <p class="text-xs">PROMOCIONES NO ACUMULABLES</p>
+    </div>
+</article>
+
+<style>
+
+</style>

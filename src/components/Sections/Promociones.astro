@@ -1,0 +1,31 @@
+---
+import CardPromocion from "../CardPromocion.astro";
+import Title from "../Title.astro";
+---
+
+<section
+  id="promociones"
+  class="flex flex-wrap items-center justify-center gap-5 mb-5"
+>
+  <Title class="text-pink-400">PROMOCIONES</Title>
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    <CardPromocion image="./assets/images/cara.png" promo="FACIALES">
+      <p>
+        Descripción de la promoción. Agregar detalles necesarios, pero sin
+        colocar precios.
+      </p>
+    </CardPromocion>
+
+    <CardPromocion image="./assets/images/ojos.png" promo="BELLEZA">
+      <p>
+        Descripción de la promoción. Agregar detalles necesarios, pero sin
+        colocar precios.
+      </p>
+    </CardPromocion>
+  </div>
+
+  <Title class="text-pink-400">¡Consultá sin compromiso!</Title>
+
+</section>
+
+<!-- Tiempo de la vista mobile 1hs -->

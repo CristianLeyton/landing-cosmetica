@@ -1,15 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Inicio from '../components/Inicio.astro';
+import Navbar from '../components/Sections/Navbar.astro';
+import Inicio from '../components/Sections/Inicio.astro';
+import Tratamientos from '../components/Sections/Tratamientos.astro';
+import Promociones from '../components/Sections/Promociones.astro';
 ---
 
 <Layout title="Cosmetica JLO">
 	<main>
 		<header>
 			<Navbar></Navbar>
-			<Inicio></Inicio>
 		</header>
+		<Inicio></Inicio>
+	<Tratamientos></Tratamientos>
+	<Promociones></Promociones>
 	</main>
 </Layout>
 
