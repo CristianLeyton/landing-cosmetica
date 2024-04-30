@@ -1,26 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Sections/Navbar.astro';
-import Inicio from '../components/Sections/Inicio.astro';
-import Tratamientos from '../components/Sections/Tratamientos.astro';
-import Promociones from '../components/Sections/Promociones.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Sections/Navbar.astro";
+import Inicio from "../components/Sections/Inicio.astro";
+import Tratamientos from "../components/Sections/Tratamientos.astro";
+import Promociones from "../components/Sections/Promociones.astro";
+import Nosotros from "../components/Sections/Nosotros.astro";
 ---
 
 <Layout title="Cosmetica JLO">
-	<main>
-		<header>
-			<Navbar></Navbar>
-		</header>
-		<Inicio></Inicio>
-	<Tratamientos></Tratamientos>
-	<Promociones></Promociones>
-	</main>
+  <main>
+    <header>
+      <Navbar />
+    </header>
+    <Inicio />
+    <Tratamientos />
+    <Promociones />
+    <Nosotros client:load />
+  </main>
 </Layout>
 
 <style>
-
-
-	/* .text-gradient {
+  /* .text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;

@@ -1,0 +1,112 @@
+---
+import WavesT from "../WavesT.astro";
+import WavesB from "../WavesB.astro";
+import Title from "../Title.astro";
+
+const mail = "cosmetica@jlomail.com";
+const phone = "3871234567";
+const instagram = "jloinstagram"
+---
+
+<section id="nosotros" class="scroll-m-[50px]">
+  <WavesT color="#f768a1" />
+
+  <article
+    class="bg-[#f768a1] my-[-2px] flex flex-col flex-wrap text-white text-pretty text-center justify-center overflow-hidden"
+  >
+    <Title>NOSOTROS</Title>
+    <p class="mx-4 p-4">
+      Con más de 20 años de experiencia en el rubro. Nos especializamos en el
+      area. Y nuestro principal objetivo es garantizar la calidad de nuestros
+      servicios. Trabajamos con los mejores productos y equipos de ultima
+      tecnología.
+    </p>
+
+    <Title>DIRECCIÓN</Title>
+
+    <p class="text-lg">Av. Democracia 416 - B° El Huaico</p>
+    <!-- DIV MAPA -->
+    <div class="p-1 bg-white m-4 rounded-xl">
+      <div
+        id="map"
+        class="map h-[250px] w-full z-10 bg-white box-border rounded-xl"
+      >
+      </div>
+    </div>
+    <!-- FIN DIV MAPA -->
+
+    <Title>CONTACTANOS</Title>
+
+    <a
+      href=`mailto:${mail}`
+      class="flex items-center justify-center gap-2 text-xl"
+    >
+      <i class="text-2xl bx bxs-envelope"></i>
+      <span>{mail}</span>
+    </a>
+    <a
+      href=`tel:${phone}`
+      class="flex items-center justify-center gap-2 text-xl"
+    >
+    <i class='text-2xl bx bxs-phone-call' ></i>
+      <span>+54 {phone}</span>
+    </a>
+    <a
+      href=`https://www.instagram.com/${instagram}/`
+      class="flex items-center justify-center gap-2 text-xl"
+    >
+      <i class="text-2xl bx bxl-instagram-alt"></i>
+      <span>@{instagram}</span>
+    </a>
+  </article>
+  <WavesB color="#f768a1" />
+</section>
+<script is:inline src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"
+></script>
+<script>
+  //Inicializa el mapa
+  // @ts-ignore
+  var map = L.map("map").setView(
+    [-24.72389, -65.41916], //estas son las coordenadas de donde se va a centrar el mapa
+    17
+  ); //EL ultimo numero en este caso "13" es el zoom del mapa
+  // @ts-ignore
+  L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      'Map &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> - <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+    maxZoom: 19,
+  }).addTo(map);
+
+  //Personalizar marcador:
+  // @ts-ignore
+  var marcador = L.icon({
+    iconUrl: "./assets/images/marcador.png",
+    iconSize: [25, 60],
+    popupAnchor: [0, -35],
+  });
+  // @ts-ignore
+  var marker = L.marker([-24.72389, -65.41916], { icon: marcador }).addTo(map);
+  //Añade PopUp
+  marker.bindPopup(
+    "<b>¡Nuestra ubicación!</b><br><a href='https://maps.app.goo.gl/3Y7MNbkUQvJDrHNT7' target='_blank'>Como llegar</a>"
+  );
+
+  //Dame las coordenadas de donde de click:
+  // @ts-ignore
+  /*  var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);  */
+
+  //Añade marcador
+  // @ts-ignore
+  /* var marker = L.marker([-24.7897066, -65.4106357]).addTo(map);  */
+</script>
+
+<!-- Tiempo para vista mobile 1.30hs pinche mapa y pinche typescript -->
