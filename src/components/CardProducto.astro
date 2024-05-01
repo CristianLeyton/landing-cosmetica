@@ -1,0 +1,37 @@
+---
+const { image, title } = Astro.props;
+---
+
+<article
+  class="slide snap-center size-80 bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
+  style=`background-image: url(${image});`
+>
+  <div class="flex flex-col justify-between h-full">
+    <div></div>
+    <div class="bg-[#f768a1e0] p-4 rounded-b-2xl text-white">
+      <h1 class="font-black text-xl rounded">
+        <span class="">{title}</span>
+      </h1>
+      <slot />
+    </div>
+  </div>
+</article>
+
+<style is:global>
+  .slider {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+</style>

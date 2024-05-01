@@ -1,0 +1,81 @@
+---
+import Title from "../Title.astro";
+import CardProducto from "../CardProducto.astro";
+
+const PRODUCTOS = [
+  {
+    title: "Nombre producto 1",
+    description:
+      "Breve descripción del producto número 1 y los beneficios que trae al cliente. ",
+    image: "./assets/images/producto1.png",
+  },
+  {
+    title: "Nombre producto 2",
+    description:
+      "Breve descripción del producto número 2 y los beneficios que trae al cliente. ",
+    image: "./assets/images/producto2.png",
+  },
+  {
+    title: "Nombre producto 3",
+    description:
+      "Breve descripción del producto número 3 y los beneficios que trae al cliente. ",
+    image: "./assets/images/producto3.png",
+  },
+];
+
+const EQUIPOS = [
+  {
+    title: "Nombre equipo 1",
+    description:
+      "Breve descripción del producto número 1 y los beneficios que trae al cliente. ",
+    image: "./assets/images/equipo1.png",
+  },
+  {
+    title: "Nombre equipo 2",
+    description:
+      "Breve descripción del producto número 2 y los beneficios que trae al cliente. ",
+    image: "./assets/images/equipo2.png",
+  },
+  {
+    title: "Nombre equipo 3",
+    description:
+      "Breve descripción del producto número 3 y los beneficios que trae al cliente. ",
+    image: "./assets/images/equipo3.png",
+  },
+];
+---
+
+<hr class="m-5" />
+<section
+  id="productos"
+  class="flex flex-wrap items-center justify-center gap-5 mb-5 scroll-m-[90px]"
+>
+<div>
+  <Title class="text-[#f768a1]">NUESTROS PRODUCTOS</Title>
+
+  <div class="slider size-[340px] mt-4">
+    {
+      PRODUCTOS.map((producto) => (
+        <CardProducto image={producto.image} title={producto.title}>
+          <p>{producto.description}</p>
+        </CardProducto>
+      ))
+    }
+  </div>
+</div>
+<div></div>
+ <Title class="text-[#f768a1]">NUESTROS EQUIPOS</Title>
+
+  <div class="slider size-[340px] ">
+    {
+      EQUIPOS.map((equipo) => (
+        <CardProducto image={equipo.image} title={equipo.title}>
+          <p>{equipo.description}</p>
+        </CardProducto>
+      ))
+    }
+  </div> 
+</div>
+</section>
+
+<!-- Para terminar la vista mobile demore 1.20hs -->
