@@ -4,10 +4,10 @@ const {image, text} = Astro.props;
 
 <article class="flex flex-col gap-3 p-5 items-center">
     <figure>
-        <img src=`${image}` class="aspect-square rounded-[50%] border-[5px] border-white bg-white w-40" alt="Tratamiendo cosmetica">
+        <img src=`${image}` class="aspect-square rounded-[50%] border-[5px] border-white bg-white w-40 md:w-52 lg:w-64" alt="Tratamiendo cosmetica">
     </figure>
 
-    <span class="bg-white text-gray-900 font-semibold text-center w-fit rounded-full px-4 py-1">
+    <span class="bg-white text-gray-900 font-semibold text-center w-fit rounded-full px-4 py-1 md:text-xl lg:text-xl">
         {text}
     </span>
 </article>
