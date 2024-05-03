@@ -20,15 +20,16 @@ const PROMOCIONES = [
 
 <section
   id="promociones"
-  class="flex flex-wrap items-center justify-center gap-5 mb-5 scroll-m-[90px]"
+  class="flex sm:flex-col flex-wrap items-center justify-center gap-5 lg:gap-10 mb-5 scroll-m-[90px] md:scroll-m-[170px] lg:scroll-m-[290px]"
 >
-  <Title class="text-[#f768a1]">PROMOCIONES</Title>
-  <div class="flex flex-wrap items-center justify-center gap-5">
+  <Title class="text-[#f768a1] md:mt-[-80px] lg:mt-[-100px] xl:mt-[-150px] 2xl:mt-[-180px]">PROMOCIONES</Title>
+  
+  <div class="flex flex-wrap items-center justify-center gap-5 lg:gap-10 xl:gap-32">
     <!-- Si es necesario agregar una nueva, se hace agregandola en el objeto PROMOCIONES arriba -->
     {
       PROMOCIONES.map((promo) => (
         <CardPromocion image={promo.image} promo={promo.title}>
-          <p>{promo.description}</p>
+          <p class="lg:text-xl">{promo.description}</p>
         </CardPromocion>
       ))
     }

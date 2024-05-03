@@ -48,12 +48,13 @@ const EQUIPOS = [
 <hr class="m-5" />
 <section
   id="productos"
-  class="flex flex-wrap items-center justify-center gap-5 mb-5 scroll-m-[90px]"
+  class="flex lg:flex-col flex-wrap items-center justify-center gap-5 mb-5 lg:gap-14 lg:mt-10 scroll-m-[90px]"
 >
-<div>
+<!-- PRODUCTOS VISTA MOVIL -->
+<div class="flex flex-col items-center justify-between gap-5 md:hidden">
   <Title class="text-[#f768a1]">NUESTROS PRODUCTOS</Title>
 
-  <div class="slider size-[340px] mt-4">
+  <div class="slider size-[340px] ">
     {
       PRODUCTOS.map((producto) => (
         <CardProducto image={producto.image} title={producto.title}>
@@ -63,10 +64,26 @@ const EQUIPOS = [
     }
   </div>
 </div>
-<div></div>
+<!-- PRODUCTOS VISTA ESCRITORIO -->
+<div class="md:flex flex-col items-center justify-between gap-5 hidden">
+  <Title class="text-[#f768a1]">NUESTROS PRODUCTOS</Title>
+
+  <div class="flex flex-wrap items-center justify-center gap-3 xl:gap-10">
+    {
+      PRODUCTOS.map((producto) => (
+        <CardProducto image={producto.image} title={producto.title}>
+          <p>{producto.description}</p>
+        </CardProducto>
+      ))
+    }
+  </div>
+</div>
+
+<!-- EQUIPOS VISTA MOVIL -->
+ <div class="flex flex-col items-center justify-between gap-5 md:hidden">
  <Title class="text-[#f768a1]">NUESTROS EQUIPOS</Title>
 
-  <div class="slider size-[340px] ">
+  <div class="slider size-[340px]">
     {
       EQUIPOS.map((equipo) => (
         <CardProducto image={equipo.image} title={equipo.title}>
@@ -75,7 +92,23 @@ const EQUIPOS = [
       ))
     }
   </div> 
-</div>
+</div> 
+
+<!-- EQUIPOS VISTA ESCRITORIO -->
+<div class="md:flex flex-col items-center justify-between gap-5 hidden">
+  <Title class="text-[#f768a1]">NUESTROS EQUIPOS</Title>
+ 
+   <div class="flex flex-wrap items-center justify-center gap-3 xl:gap-10">
+     {
+       EQUIPOS.map((equipo) => (
+         <CardProducto image={equipo.image} title={equipo.title}>
+           <p>{equipo.description}</p>
+         </CardProducto>
+       ))
+     }
+   </div> 
+ </div> 
+
 </section>
 
 <!-- Para terminar la vista mobile demore 1.20hs -->

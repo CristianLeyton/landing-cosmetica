@@ -3,7 +3,22 @@ const { image, title } = Astro.props;
 ---
 
 <article
-  class="slide snap-center size-80 bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
+  class="slide md:hidden snap-center size-80 bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
+  style=`background-image: url(${image});`
+>
+  <div class="flex flex-col justify-between h-full">
+    <div></div>
+    <div class="bg-[#f768a1e0] p-4 rounded-b-2xl text-white">
+      <h1 class="font-black text-xl rounded">
+        <span class="">{title}</span>
+      </h1>
+      <slot />
+    </div>
+  </div>
+</article>
+
+<article
+  class="hidden md:block snap-center size-80 bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
   style=`background-image: url(${image});`
 >
   <div class="flex flex-col justify-between h-full">
@@ -33,5 +48,5 @@ const { image, title } = Astro.props;
     object-fit: cover;
   }
 
-
+  
 </style>

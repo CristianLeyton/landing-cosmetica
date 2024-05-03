@@ -5,60 +5,72 @@ import Title from "../Title.astro";
 
 const mail = "cosmetica@jlomail.com";
 const phone = "3871234567";
-const instagram = "userjloinstagram"
+const instagram = "userjloinstagram";
 ---
 
-<section id="nosotros" class="">
+<section id="nosotros" class="md:scroll-m-[-30px] 2xl:scroll-m-[-120px]">
   <WavesT color="#f768a1" />
 
   <article
-    class="bg-[#f768a1] my-[-2px] flex flex-col flex-wrap text-white text-pretty text-center justify-center overflow-hidden"
+    class="bg-[#f768a1] my-[-2px] flex flex-col md:flex-row md:gap-10 md:justify-evenly flex-wrap text-white text-pretty text-center justify-center overflow-hidden
+    md:mt-[-80px] lg:mt-[-100px] xl:mt-[-150px] 2xl:mt-[-180px]"
   >
-    <Title>NOSOTROS</Title>
-    <p class="mx-4 p-4">
-      Con más de 20 años de experiencia en el rubro. Nos especializamos en el
-      area. Y nuestro principal objetivo es garantizar la calidad de nuestros
-      servicios. Trabajamos con los mejores productos y equipos de ultima
-      tecnología.
-    </p>
-
-    <Title>DIRECCIÓN</Title>
-
-    <p class="text-lg">Av. Democracia 416 - B° El Huaico</p>
-    <!-- DIV MAPA -->
-    <div class="p-1 bg-white m-4 rounded-xl">
+    <div class="flex flex-col gap-1 max-w-3xl xl:max-w-4xl text-pretty">
+      <Title>NOSOTROS</Title>
+      <p class="mx-4 p-4 md:text-lg lg:text-2xl">
+        Con más de 20 años de experiencia en el rubro. Nos especializamos en el
+        area. Y nuestro principal objetivo es garantizar la calidad de nuestros
+        servicios. Trabajamos con los mejores productos y equipos de ultima
+        tecnología.
+      </p>
+    </div>
+    <div class="flex flex-col md:flex-row justify-evenly w-full">
+      <div class="flex flex-col gap-1 text-pretty">
+        <Title>DIRECCIÓN</Title>
+        <p class="text-lg lg:text-xl">Av. Democracia 416 - B° El Huaico</p>
+        <!-- DIV MAPA -->
+        <div class="p-1 bg-white m-4 rounded-xl">
+          <div
+            id="map"
+            class="map h-[250px] md:size-80 lg:size-96 w-full bg-white box-border rounded-xl z-0"
+          >
+          </div>
+        </div>
+      </div>
+      <!-- FIN DIV MAPA -->
       <div
-        id="map"
-        class="map h-[250px] w-full bg-white box-border rounded-xl z-0"
+        class="flex flex-col gap-1 sm:max-w-[400px] lg:max-w-full text-pretty mx-auto md:mx-0"
       >
+        <Title>CONTACTANOS</Title>
+        <div
+          class="flex flex-col my-5 md:my-auto items-center justify-center gap-2 md:gap-5 md:px-14 border border-pink-300 rounded-lg mx-5 py-5 px-10"
+        >
+          <a
+            href=`mailto:${mail}`
+            class="flex items-center justify-center gap-2 text-xl md:text-2xl lg:text-4xl"
+          >
+            <i class="text-2xl lg:text-4xl bx bxs-envelope"></i>
+            <span>{mail}</span>
+          </a>
+          <a
+            href=`tel:${phone}`
+            class="flex items-center justify-center gap-2 text-xl md:text-2xl lg:text-4xl"
+          >
+            <i class="text-2xl bx bxs-phone-call lg:text-4xl"></i>
+            <span>+54 {phone}</span>
+          </a>
+          <a
+            href=`https://www.instagram.com/${instagram}/`
+            class="flex items-center justify-center gap-2 text-xl lg:text-4xl"
+            target="_blank"
+          >
+            <i class="text-2xl bx bxl-instagram-alt md:text-3xl lg:text-5xl"
+            ></i>
+            <span>@{instagram}</span>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- FIN DIV MAPA -->
-
-    <Title>CONTACTANOS</Title>
-
-    <a
-      href=`mailto:${mail}`
-      class="flex items-center justify-center gap-2 text-xl"
-    >
-      <i class="text-2xl bx bxs-envelope"></i>
-      <span>{mail}</span>
-    </a>
-    <a
-      href=`tel:${phone}`
-      class="flex items-center justify-center gap-2 text-xl"
-    >
-    <i class='text-2xl bx bxs-phone-call' ></i>
-      <span>+54 {phone}</span>
-    </a>
-    <a
-      href=`https://www.instagram.com/${instagram}/`
-      class="flex items-center justify-center gap-2 text-xl"
-      target="_blank"
-    >
-      <i class="text-2xl bx bxl-instagram-alt"></i>
-      <span>@{instagram}</span>
-    </a>
   </article>
   <WavesB color="#f768a1" />
 </section>
