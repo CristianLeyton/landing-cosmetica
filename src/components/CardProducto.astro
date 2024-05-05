@@ -1,14 +1,14 @@
 ---
 const { image, title } = Astro.props;
 ---
-
+<!-- VISTA MOVIL -->
 <article
-  class="slide md:hidden snap-center size-80 bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
+  class="card-producto slide md:hidden snap-center size-80 bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
   style=`background-image: url(${image});`
 >
   <div class="flex flex-col justify-between h-full">
     <div></div>
-    <div class="bg-[#f768a1e0] p-4 rounded-b-2xl text-white">
+    <div class="card-text bg-[#f768a1e0] p-4 rounded-b-2xl text-white">
       <h1 class="font-black text-xl rounded">
         <span class="">{title}</span>
       </h1>
@@ -17,14 +17,16 @@ const { image, title } = Astro.props;
   </div>
 </article>
 
+<!-- VISTA ESCRITORIO -->
+
 <article
-  class="hidden md:block snap-center size-80 bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
+  class="card-producto hidden md:block snap-center size-80 md:size-60 lg:size-72 xl:w-[22rem] xl:h-[22rem] bg-cover bg-no-repeat rounded-3xl border-[5px] border-slate-50 shadow-md"
   style=`background-image: url(${image});`
 >
   <div class="flex flex-col justify-between h-full">
     <div></div>
-    <div class="bg-[#f768a1e0] p-4 rounded-b-2xl text-white">
-      <h1 class="font-black text-xl rounded">
+    <div class="card-text bg-[#f768a1e0] p-4 rounded-b-2xl text-white">
+      <h1 class="font-black text-xl rounded lg:text-2xl">
         <span class="">{title}</span>
       </h1>
       <slot />
@@ -48,5 +50,12 @@ const { image, title } = Astro.props;
     object-fit: cover;
   }
 
+  .card-text {
+    transition: 0.2s all ease-in-out;
+  }
+  .card-producto:hover .card-text{
+    cursor: pointer;
+    padding: 1rem 1rem 1.5rem 1rem ;
+  }
   
 </style>

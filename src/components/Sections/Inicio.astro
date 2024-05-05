@@ -7,31 +7,46 @@ import Title from "../Title.astro";
   id="inicio"
   class="hero h-50 xl:h-64 w-full flex items-center justify-evenly flex-col py-6 xl:py-4 mt-[70px] scroll-m-[70px]"
 >
-  <h1 class="text-4xl xl:text-5xl 2xl:text-6xl font-bold text-center text-white">
+  <h1
+    class="text-4xl xl:text-5xl 2xl:text-6xl font-bold text-center text-white"
+  >
     CENTRO INTEGRAL <br /> DE BELLEZA
   </h1>
-  <h4 class="text-md xl:text-lg 2xl:text-2xl font-medium text-white text-pretty text-center">
+  <h4
+    class="text-md xl:text-lg 2xl:text-2xl font-medium text-white text-pretty text-center"
+  >
     TECNOLOGÍA Y PROCEDIMIENTOS <br class="block" />
     NO INVASIVOS DE VANGUARDIA
     <br class="block" />PARA EL CUIDADO CORPORAL Y FACIAL
   </h4>
 </section>
 
-<section class="flex flex-col sm:flex-row sm:justify-around sm:items-center py-0 sm:p-3 md:justify-center md:gap-10 xl:gap-20 xl:mt-10">
+<section
+  class="flex flex-col sm:flex-row sm:justify-around sm:items-center py-0 sm:p-3 md:justify-center md:gap-10 xl:gap-20 xl:mt-10"
+>
+  <figure
+    class="sm:max-w-[350px] md:max-w-[450px] xl:max-w-[550px] aspect-video pt-2"
+  >
+    <img src="./assets/images/inicio.png" alt="" class="sm:rounded-xl" />
+  </figure>
 
-<figure class="sm:max-w-[350px] md:max-w-[450px] xl:max-w-[550px] aspect-video pt-2">
-  <img src="./assets/images/inicio.png" alt="" class="sm:rounded-xl"/>
-</figure>
-
-<section class="text-center text-pretty flex flex-col gap-2 md:gap-3 py-4 items-center md:justify-center ">
-  <Title class="text-pink-400 sm:text-xl md:text-2xl xl:text-3xl"> RESERVA TU TURNO </Title>
-  <p class="px-6 sm:text-sm md:text-base xl:text-xl">Podes consultar disponibilidad y presupuestos <br class="hidden md:block"> enviándonos un mensaje.</p>
-  <p class="mb-3 sm:text-sm md:text-base xl:text-xl">
-    <strong>Horario de atención:</strong><br />
-    Lunes a Viernes de 09:00hs a 16:00hs
-  </p>
-  <ButtonTurno />
-</section>
+  <section
+    class="text-center text-pretty flex flex-col gap-2 md:gap-3 py-4 items-center md:justify-center"
+  >
+    <Title class="text-pink-400 sm:text-xl md:text-2xl xl:text-3xl">
+      RESERVA TU TURNO
+    </Title>
+    <p class="px-6 sm:text-sm md:text-base xl:text-xl">
+      Podes consultar disponibilidad y presupuestos <br
+        class="hidden md:block"
+      /> enviándonos un mensaje.
+    </p>
+    <p class="mb-3 sm:text-sm md:text-base xl:text-xl">
+      <strong>Horario de atención:</strong><br />
+      Lunes a Viernes de 09:00hs a 16:00hs
+    </p>
+    <ButtonTurno />
+  </section>
 </section>
 <style>
   .hero {

@@ -45,7 +45,7 @@ const EQUIPOS = [
 ];
 ---
 
-<hr class="m-5" />
+<hr class="m-10" />
 <section
   id="productos"
   class="flex lg:flex-col flex-wrap items-center justify-center gap-5 mb-5 lg:gap-14 lg:mt-10 scroll-m-[90px]"
@@ -72,7 +72,7 @@ const EQUIPOS = [
     {
       PRODUCTOS.map((producto) => (
         <CardProducto image={producto.image} title={producto.title}>
-          <p>{producto.description}</p>
+          <p class="md:text-sm lg:text-xl">{producto.description}</p>
         </CardProducto>
       ))
     }
@@ -102,7 +102,7 @@ const EQUIPOS = [
      {
        EQUIPOS.map((equipo) => (
          <CardProducto image={equipo.image} title={equipo.title}>
-           <p>{equipo.description}</p>
+           <p class="md:text-sm lg:text-xl">{equipo.description}</p>
          </CardProducto>
        ))
      }
